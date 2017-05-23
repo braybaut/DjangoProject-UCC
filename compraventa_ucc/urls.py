@@ -21,4 +21,6 @@ from compraventa import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.inicio, name='inicio'),
+    url(r'^test/', views.test, name='test'),
+
 ]
