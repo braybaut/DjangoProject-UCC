@@ -3,9 +3,9 @@ from django.db import models
 
 class compraventa(forms.Form):
     Articulos = (
-        ('oro', 'Valor tipo Oro'),
-        ('plata', 'Valor tipo Plata'),
-        ('Chatarra','Valor tipo Chatarra'),
+        ('1', 'Valor tipo Oro'),
+        ('2', 'Valor tipo Plata'),
+        ('3','Valor tipo Chatarra'),
     )
     
     nombre = forms.CharField(max_length=15, widget=forms.TextInput(attrs={'placeholder' : 'nombre',  'class' : 'form-control' , 'data-error' : 'Bruh, that email address is invalid' , 'type' : 'text'}))    
