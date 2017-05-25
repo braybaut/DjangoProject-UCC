@@ -1,0 +1,7 @@
+SELECT emp.id as empeno, art.nombre_articulo, empart.valor_articulo, SUM(abo.valor_abono) as total_abono
+FROM empeno_articulo AS empart
+INNER JOIN empeno AS emp ON empart.empeno_id = emp.id
+INNER JOIN articulo AS art ON empart.articulo_id = art.id
+LEFT JOIN abono AS abo ON empart.id = abo.empeno_articulo_id
+WHERE emp.fecha_vencimiento < CURDATE()
+GROUP BY empart.articulo_id
